@@ -1,46 +1,55 @@
-{
-	"maj": {
+[
+	{
 		"name": "Major Triad",
+		"abbr": "maj",
 		"degrees": [ "1", "3", "5" ]
 	},
 
-	"m": {
+	{
 		"name": "Minor Triad",
+		"abbr": "m",
 		"degrees": [ "1", "b3", "5" ]
 	},
 
-	"dim": {
+	{
 		"name": "Diminished Triad",
+		"abbr": "dim",
 		"degrees": [ "1", "b3", "b5" ]
 	},
 
-	"aug": {
+	{
 		"name": "Augmented Triad",
+		"abbr": "aug",
 		"degrees": [ "1", "3", "#5" ]
 	},
 
-	"maj7": {
+	{
 		"name": "Major Seventh",
+		"abbr": "maj7",
 		"degrees": [ "1", "3", "5", "7" ]
 	},
 
-	"7": {
+	{
 		"name": "Dominant Seventh",
+		"abbr": "7",
 		"degrees": [ "1", "3", "5", "b7" ]
 	},
 
-	"m7": {
+	{
 		"name": "Minor Seventh",
+		"abbr": "m7",
 		"degrees": [ "1", "b3", "5", "b7"]
 	},
 
-	"m7b5": {
+	{
 		"name": "Half Diminished Seventh",
+		"abbr": "m7b5",
 		"degrees": [ "1", "b3", "b5", "b7" ]
 	},
 
-	"dim7": {
+	{
 		"name": "Diminished Seventh",
+		"abbr": "dim7",
 		"degrees": [ "1", "b3", "b5", "bb7" ]
 	}
-}
+]

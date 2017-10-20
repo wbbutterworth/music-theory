@@ -5,129 +5,152 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	0.0.0	/389f791/
-0	source/Chord/data.json	/^		"degrees": [ "1", "3", "#5" ]$/;"	s	language:JSON	array:aug.degrees
-0	source/Chord/data.json	/^		"degrees": [ "1", "3", "5" ]$/;"	s	language:JSON	array:maj.degrees
-0	source/Chord/data.json	/^		"degrees": [ "1", "3", "5", "7" ]$/;"	s	language:JSON	array:maj7.degrees
-0	source/Chord/data.json	/^		"degrees": [ "1", "3", "5", "b7" ]$/;"	s	language:JSON	array:7.degrees
-0	source/Chord/data.json	/^		"degrees": [ "1", "b3", "5" ]$/;"	s	language:JSON	array:m.degrees
-0	source/Chord/data.json	/^		"degrees": [ "1", "b3", "5", "b7"]$/;"	s	language:JSON	array:m7.degrees
-0	source/Chord/data.json	/^		"degrees": [ "1", "b3", "b5" ]$/;"	s	language:JSON	array:dim.degrees
-0	source/Chord/data.json	/^		"degrees": [ "1", "b3", "b5", "b7" ]$/;"	s	language:JSON	array:m7b5.degrees
-0	source/Chord/data.json	/^		"degrees": [ "1", "b3", "b5", "bb7" ]$/;"	s	language:JSON	array:dim7.degrees
-1	source/Chord/data.json	/^		"degrees": [ "1", "3", "#5" ]$/;"	s	language:JSON	array:aug.degrees
-1	source/Chord/data.json	/^		"degrees": [ "1", "3", "5" ]$/;"	s	language:JSON	array:maj.degrees
-1	source/Chord/data.json	/^		"degrees": [ "1", "3", "5", "7" ]$/;"	s	language:JSON	array:maj7.degrees
-1	source/Chord/data.json	/^		"degrees": [ "1", "3", "5", "b7" ]$/;"	s	language:JSON	array:7.degrees
-1	source/Chord/data.json	/^		"degrees": [ "1", "b3", "5" ]$/;"	s	language:JSON	array:m.degrees
-1	source/Chord/data.json	/^		"degrees": [ "1", "b3", "5", "b7"]$/;"	s	language:JSON	array:m7.degrees
-1	source/Chord/data.json	/^		"degrees": [ "1", "b3", "b5" ]$/;"	s	language:JSON	array:dim.degrees
-1	source/Chord/data.json	/^		"degrees": [ "1", "b3", "b5", "b7" ]$/;"	s	language:JSON	array:m7b5.degrees
-1	source/Chord/data.json	/^		"degrees": [ "1", "b3", "b5", "bb7" ]$/;"	s	language:JSON	array:dim7.degrees
-2	source/Chord/data.json	/^		"degrees": [ "1", "3", "#5" ]$/;"	s	language:JSON	array:aug.degrees
-2	source/Chord/data.json	/^		"degrees": [ "1", "3", "5" ]$/;"	s	language:JSON	array:maj.degrees
-2	source/Chord/data.json	/^		"degrees": [ "1", "3", "5", "7" ]$/;"	s	language:JSON	array:maj7.degrees
-2	source/Chord/data.json	/^		"degrees": [ "1", "3", "5", "b7" ]$/;"	s	language:JSON	array:7.degrees
-2	source/Chord/data.json	/^		"degrees": [ "1", "b3", "5" ]$/;"	s	language:JSON	array:m.degrees
-2	source/Chord/data.json	/^		"degrees": [ "1", "b3", "5", "b7"]$/;"	s	language:JSON	array:m7.degrees
-2	source/Chord/data.json	/^		"degrees": [ "1", "b3", "b5" ]$/;"	s	language:JSON	array:dim.degrees
-2	source/Chord/data.json	/^		"degrees": [ "1", "b3", "b5", "b7" ]$/;"	s	language:JSON	array:m7b5.degrees
-2	source/Chord/data.json	/^		"degrees": [ "1", "b3", "b5", "bb7" ]$/;"	s	language:JSON	array:dim7.degrees
-3	source/Chord/data.json	/^		"degrees": [ "1", "3", "5", "7" ]$/;"	s	language:JSON	array:maj7.degrees
-3	source/Chord/data.json	/^		"degrees": [ "1", "3", "5", "b7" ]$/;"	s	language:JSON	array:7.degrees
-3	source/Chord/data.json	/^		"degrees": [ "1", "b3", "5", "b7"]$/;"	s	language:JSON	array:m7.degrees
-3	source/Chord/data.json	/^		"degrees": [ "1", "b3", "b5", "b7" ]$/;"	s	language:JSON	array:m7b5.degrees
-3	source/Chord/data.json	/^		"degrees": [ "1", "b3", "b5", "bb7" ]$/;"	s	language:JSON	array:dim7.degrees
-7	source/Chord/data.json	/^	"7": {$/;"	o	language:JSON
+0	source/Chord/data.json	/^		"degrees": [ "1", "3", "#5" ]$/;"	s	language:JSON	array:3.degrees
+0	source/Chord/data.json	/^		"degrees": [ "1", "3", "5" ]$/;"	s	language:JSON	array:0.degrees
+0	source/Chord/data.json	/^		"degrees": [ "1", "3", "5", "7" ]$/;"	s	language:JSON	array:4.degrees
+0	source/Chord/data.json	/^		"degrees": [ "1", "3", "5", "b7" ]$/;"	s	language:JSON	array:5.degrees
+0	source/Chord/data.json	/^		"degrees": [ "1", "b3", "5" ]$/;"	s	language:JSON	array:1.degrees
+0	source/Chord/data.json	/^		"degrees": [ "1", "b3", "5", "b7"]$/;"	s	language:JSON	array:6.degrees
+0	source/Chord/data.json	/^		"degrees": [ "1", "b3", "b5" ]$/;"	s	language:JSON	array:2.degrees
+0	source/Chord/data.json	/^		"degrees": [ "1", "b3", "b5", "b7" ]$/;"	s	language:JSON	array:7.degrees
+0	source/Chord/data.json	/^		"degrees": [ "1", "b3", "b5", "bb7" ]$/;"	s	language:JSON	array:8.degrees
+0	source/Chord/data.json	/^	{$/;"	o	language:JSON
+0	source/Interval/data.json	/^	{$/;"	o	language:JSON
+1	source/Chord/data.json	/^		"degrees": [ "1", "3", "#5" ]$/;"	s	language:JSON	array:3.degrees
+1	source/Chord/data.json	/^		"degrees": [ "1", "3", "5" ]$/;"	s	language:JSON	array:0.degrees
+1	source/Chord/data.json	/^		"degrees": [ "1", "3", "5", "7" ]$/;"	s	language:JSON	array:4.degrees
+1	source/Chord/data.json	/^		"degrees": [ "1", "3", "5", "b7" ]$/;"	s	language:JSON	array:5.degrees
+1	source/Chord/data.json	/^		"degrees": [ "1", "b3", "5" ]$/;"	s	language:JSON	array:1.degrees
+1	source/Chord/data.json	/^		"degrees": [ "1", "b3", "5", "b7"]$/;"	s	language:JSON	array:6.degrees
+1	source/Chord/data.json	/^		"degrees": [ "1", "b3", "b5" ]$/;"	s	language:JSON	array:2.degrees
+1	source/Chord/data.json	/^		"degrees": [ "1", "b3", "b5", "b7" ]$/;"	s	language:JSON	array:7.degrees
+1	source/Chord/data.json	/^		"degrees": [ "1", "b3", "b5", "bb7" ]$/;"	s	language:JSON	array:8.degrees
+1	source/Chord/data.json	/^	{$/;"	o	language:JSON
+1	source/Interval/data.json	/^	{$/;"	o	language:JSON
+10	source/Interval/data.json	/^	{$/;"	o	language:JSON
+11	source/Interval/data.json	/^	{$/;"	o	language:JSON
+12	source/Interval/data.json	/^	{$/;"	o	language:JSON
+2	source/Chord/data.json	/^		"degrees": [ "1", "3", "#5" ]$/;"	s	language:JSON	array:3.degrees
+2	source/Chord/data.json	/^		"degrees": [ "1", "3", "5" ]$/;"	s	language:JSON	array:0.degrees
+2	source/Chord/data.json	/^		"degrees": [ "1", "3", "5", "7" ]$/;"	s	language:JSON	array:4.degrees
+2	source/Chord/data.json	/^		"degrees": [ "1", "3", "5", "b7" ]$/;"	s	language:JSON	array:5.degrees
+2	source/Chord/data.json	/^		"degrees": [ "1", "b3", "5" ]$/;"	s	language:JSON	array:1.degrees
+2	source/Chord/data.json	/^		"degrees": [ "1", "b3", "5", "b7"]$/;"	s	language:JSON	array:6.degrees
+2	source/Chord/data.json	/^		"degrees": [ "1", "b3", "b5" ]$/;"	s	language:JSON	array:2.degrees
+2	source/Chord/data.json	/^		"degrees": [ "1", "b3", "b5", "b7" ]$/;"	s	language:JSON	array:7.degrees
+2	source/Chord/data.json	/^		"degrees": [ "1", "b3", "b5", "bb7" ]$/;"	s	language:JSON	array:8.degrees
+2	source/Chord/data.json	/^	{$/;"	o	language:JSON
+2	source/Interval/data.json	/^	{$/;"	o	language:JSON
+3	source/Chord/data.json	/^		"degrees": [ "1", "3", "5", "7" ]$/;"	s	language:JSON	array:4.degrees
+3	source/Chord/data.json	/^		"degrees": [ "1", "3", "5", "b7" ]$/;"	s	language:JSON	array:5.degrees
+3	source/Chord/data.json	/^		"degrees": [ "1", "b3", "5", "b7"]$/;"	s	language:JSON	array:6.degrees
+3	source/Chord/data.json	/^		"degrees": [ "1", "b3", "b5", "b7" ]$/;"	s	language:JSON	array:7.degrees
+3	source/Chord/data.json	/^		"degrees": [ "1", "b3", "b5", "bb7" ]$/;"	s	language:JSON	array:8.degrees
+3	source/Chord/data.json	/^	{$/;"	o	language:JSON
+3	source/Interval/data.json	/^	{$/;"	o	language:JSON
+4	source/Chord/data.json	/^	{$/;"	o	language:JSON
+4	source/Interval/data.json	/^	{$/;"	o	language:JSON
+5	source/Chord/data.json	/^	{$/;"	o	language:JSON
+5	source/Interval/data.json	/^	{$/;"	o	language:JSON
+6	source/Chord/data.json	/^	{$/;"	o	language:JSON
+6	source/Interval/data.json	/^	{$/;"	o	language:JSON
+7	source/Chord/data.json	/^	{$/;"	o	language:JSON
+7	source/Interval/data.json	/^	{$/;"	o	language:JSON
+8	source/Chord/data.json	/^	{$/;"	o	language:JSON
+8	source/Interval/data.json	/^	{$/;"	o	language:JSON
+9	source/Interval/data.json	/^	{$/;"	o	language:JSON
 Chord	index.js	/^const Chord = require( '.\/source\/Chord' );$/;"	C	language:JavaScript
-Chord	source/Chord/index.js	/^const Chord = function( notation ) {$/;"	c	language:JavaScript
+Chord	source/Chord/index.js	/^const Chord = function( symbol ) {$/;"	f	language:JavaScript
 Interval	source/Interval/index.js	/^const Interval = function( name ) {$/;"	c	language:JavaScript
-M2	source/Interval/data.json	/^	"M2": {$/;"	o	language:JSON
-M3	source/Interval/data.json	/^	"M3": {$/;"	o	language:JSON
-M6	source/Interval/data.json	/^	"M6": {$/;"	o	language:JSON
-M7	source/Interval/data.json	/^	"M7": {$/;"	o	language:JSON
 Note	source/Note/index.js	/^const Note = function( letter ) {$/;"	c	language:JavaScript
-P1	source/Interval/data.json	/^	"P1": {$/;"	o	language:JSON
-P4	source/Interval/data.json	/^	"P4": {$/;"	o	language:JSON
-P5	source/Interval/data.json	/^	"P5": {$/;"	o	language:JSON
-P8	source/Interval/data.json	/^	"P8": {$/;"	o	language:JSON
 Scale	source/Scale/index.js	/^const Scale = function( name ) {$/;"	c	language:JavaScript
-aug	source/Chord/data.json	/^	"aug": {$/;"	o	language:JSON
+abbr	source/Chord/data.json	/^		"abbr": "7",$/;"	s	language:JSON	object:5
+abbr	source/Chord/data.json	/^		"abbr": "aug",$/;"	s	language:JSON	object:3
+abbr	source/Chord/data.json	/^		"abbr": "dim",$/;"	s	language:JSON	object:2
+abbr	source/Chord/data.json	/^		"abbr": "dim7",$/;"	s	language:JSON	object:8
+abbr	source/Chord/data.json	/^		"abbr": "m",$/;"	s	language:JSON	object:1
+abbr	source/Chord/data.json	/^		"abbr": "m7",$/;"	s	language:JSON	object:6
+abbr	source/Chord/data.json	/^		"abbr": "m7b5",$/;"	s	language:JSON	object:7
+abbr	source/Chord/data.json	/^		"abbr": "maj",$/;"	s	language:JSON	object:0
+abbr	source/Chord/data.json	/^		"abbr": "maj7",$/;"	s	language:JSON	object:4
+abbr	source/Interval/data.json	/^		"abbr": "M2",$/;"	s	language:JSON	object:2
+abbr	source/Interval/data.json	/^		"abbr": "M3",$/;"	s	language:JSON	object:4
+abbr	source/Interval/data.json	/^		"abbr": "M6",$/;"	s	language:JSON	object:9
+abbr	source/Interval/data.json	/^		"abbr": "M7",$/;"	s	language:JSON	object:11
+abbr	source/Interval/data.json	/^		"abbr": "P1",$/;"	s	language:JSON	object:0
+abbr	source/Interval/data.json	/^		"abbr": "P4",$/;"	s	language:JSON	object:5
+abbr	source/Interval/data.json	/^		"abbr": "P5",$/;"	s	language:JSON	object:7
+abbr	source/Interval/data.json	/^		"abbr": "P8",$/;"	s	language:JSON	object:12
+abbr	source/Interval/data.json	/^		"abbr": "d5",$/;"	s	language:JSON	object:6
+abbr	source/Interval/data.json	/^		"abbr": "m2",$/;"	s	language:JSON	object:1
+abbr	source/Interval/data.json	/^		"abbr": "m3",$/;"	s	language:JSON	object:3
+abbr	source/Interval/data.json	/^		"abbr": "m6",$/;"	s	language:JSON	object:8
+abbr	source/Interval/data.json	/^		"abbr": "m7",$/;"	s	language:JSON	object:10
 author	package.json	/^  "author": "",$/;"	s	language:JSON
-chord	index.js	/^const chord = new Chord( 'Cmmaj7' );$/;"	C	language:JavaScript
-d5	source/Interval/data.json	/^	"d5": {$/;"	o	language:JSON
-degree	source/Interval/data.json	/^		"degree": "1"$/;"	s	language:JSON	object:P1
-degree	source/Interval/data.json	/^		"degree": "2"$/;"	s	language:JSON	object:M2
-degree	source/Interval/data.json	/^		"degree": "3"$/;"	s	language:JSON	object:M3
-degree	source/Interval/data.json	/^		"degree": "4"$/;"	s	language:JSON	object:P4
-degree	source/Interval/data.json	/^		"degree": "5"$/;"	s	language:JSON	object:P5
-degree	source/Interval/data.json	/^		"degree": "6"$/;"	s	language:JSON	object:M6
-degree	source/Interval/data.json	/^		"degree": "7"$/;"	s	language:JSON	object:M7
-degree	source/Interval/data.json	/^		"degree": "8"$/;"	s	language:JSON	object:P8
-degree	source/Interval/data.json	/^		"degree": "b2"$/;"	s	language:JSON	object:m2
-degree	source/Interval/data.json	/^		"degree": "b3"$/;"	s	language:JSON	object:m3
-degree	source/Interval/data.json	/^		"degree": "b5"$/;"	s	language:JSON	object:d5
-degree	source/Interval/data.json	/^		"degree": "b6"$/;"	s	language:JSON	object:m6
-degree	source/Interval/data.json	/^		"degree": "b7"$/;"	s	language:JSON	object:m7
-degrees	source/Chord/data.json	/^		"degrees": [ "1", "3", "#5" ]$/;"	a	language:JSON	object:aug
-degrees	source/Chord/data.json	/^		"degrees": [ "1", "3", "5" ]$/;"	a	language:JSON	object:maj
-degrees	source/Chord/data.json	/^		"degrees": [ "1", "3", "5", "7" ]$/;"	a	language:JSON	object:maj7
-degrees	source/Chord/data.json	/^		"degrees": [ "1", "3", "5", "b7" ]$/;"	a	language:JSON	object:7
-degrees	source/Chord/data.json	/^		"degrees": [ "1", "b3", "5" ]$/;"	a	language:JSON	object:m
-degrees	source/Chord/data.json	/^		"degrees": [ "1", "b3", "5", "b7"]$/;"	a	language:JSON	object:m7
-degrees	source/Chord/data.json	/^		"degrees": [ "1", "b3", "b5" ]$/;"	a	language:JSON	object:dim
-degrees	source/Chord/data.json	/^		"degrees": [ "1", "b3", "b5", "b7" ]$/;"	a	language:JSON	object:m7b5
-degrees	source/Chord/data.json	/^		"degrees": [ "1", "b3", "b5", "bb7" ]$/;"	a	language:JSON	object:dim7
+chord	index.js	/^const chord = new Chord( 'Csus2' );$/;"	C	language:JavaScript
+chords	source/Chord/index.js	/^const chords = require( '.\/data.json' );$/;"	C	language:JavaScript
+degree	source/Interval/data.json	/^		"degree": "1"$/;"	s	language:JSON	object:0
+degree	source/Interval/data.json	/^		"degree": "2"$/;"	s	language:JSON	object:2
+degree	source/Interval/data.json	/^		"degree": "3"$/;"	s	language:JSON	object:4
+degree	source/Interval/data.json	/^		"degree": "4"$/;"	s	language:JSON	object:5
+degree	source/Interval/data.json	/^		"degree": "5"$/;"	s	language:JSON	object:7
+degree	source/Interval/data.json	/^		"degree": "6"$/;"	s	language:JSON	object:9
+degree	source/Interval/data.json	/^		"degree": "7"$/;"	s	language:JSON	object:11
+degree	source/Interval/data.json	/^		"degree": "8"$/;"	s	language:JSON	object:12
+degree	source/Interval/data.json	/^		"degree": "b2"$/;"	s	language:JSON	object:1
+degree	source/Interval/data.json	/^		"degree": "b3"$/;"	s	language:JSON	object:3
+degree	source/Interval/data.json	/^		"degree": "b5"$/;"	s	language:JSON	object:6
+degree	source/Interval/data.json	/^		"degree": "b6"$/;"	s	language:JSON	object:8
+degree	source/Interval/data.json	/^		"degree": "b7"$/;"	s	language:JSON	object:10
+degrees	source/Chord/data.json	/^		"degrees": [ "1", "3", "#5" ]$/;"	a	language:JSON	object:3
+degrees	source/Chord/data.json	/^		"degrees": [ "1", "3", "5" ]$/;"	a	language:JSON	object:0
+degrees	source/Chord/data.json	/^		"degrees": [ "1", "3", "5", "7" ]$/;"	a	language:JSON	object:4
+degrees	source/Chord/data.json	/^		"degrees": [ "1", "3", "5", "b7" ]$/;"	a	language:JSON	object:5
+degrees	source/Chord/data.json	/^		"degrees": [ "1", "b3", "5" ]$/;"	a	language:JSON	object:1
+degrees	source/Chord/data.json	/^		"degrees": [ "1", "b3", "5", "b7"]$/;"	a	language:JSON	object:6
+degrees	source/Chord/data.json	/^		"degrees": [ "1", "b3", "b5" ]$/;"	a	language:JSON	object:2
+degrees	source/Chord/data.json	/^		"degrees": [ "1", "b3", "b5", "b7" ]$/;"	a	language:JSON	object:7
+degrees	source/Chord/data.json	/^		"degrees": [ "1", "b3", "b5", "bb7" ]$/;"	a	language:JSON	object:8
 description	package.json	/^  "description": "",$/;"	s	language:JSON
-dim	source/Chord/data.json	/^	"dim": {$/;"	o	language:JSON
-dim7	source/Chord/data.json	/^	"dim7": {$/;"	o	language:JSON
 intervals	source/Interval/index.js	/^const intervals = require( '.\/intervals.json' );$/;"	C	language:JavaScript
 license	package.json	/^  "license": "ISC"$/;"	s	language:JSON
-m	source/Chord/data.json	/^	"m": {$/;"	o	language:JSON
-m2	source/Interval/data.json	/^	"m2": {$/;"	o	language:JSON
-m3	source/Interval/data.json	/^	"m3": {$/;"	o	language:JSON
-m6	source/Interval/data.json	/^	"m6": {$/;"	o	language:JSON
-m7	source/Chord/data.json	/^	"m7": {$/;"	o	language:JSON
-m7	source/Interval/data.json	/^	"m7": {$/;"	o	language:JSON
-m7b5	source/Chord/data.json	/^	"m7b5": {$/;"	o	language:JSON
 main	package.json	/^  "main": "index.js",$/;"	s	language:JSON
-maj	source/Chord/data.json	/^	"maj": {$/;"	o	language:JSON
-maj7	source/Chord/data.json	/^	"maj7": {$/;"	o	language:JSON
 name	package.json	/^  "name": "music-theory",$/;"	s	language:JSON
-name	source/Chord/data.json	/^		"name": "Augmented Triad",$/;"	s	language:JSON	object:aug
-name	source/Chord/data.json	/^		"name": "Diminished Seventh",$/;"	s	language:JSON	object:dim7
-name	source/Chord/data.json	/^		"name": "Diminished Triad",$/;"	s	language:JSON	object:dim
-name	source/Chord/data.json	/^		"name": "Dominant Seventh",$/;"	s	language:JSON	object:7
-name	source/Chord/data.json	/^		"name": "Half Diminished Seventh",$/;"	s	language:JSON	object:m7b5
-name	source/Chord/data.json	/^		"name": "Major Seventh",$/;"	s	language:JSON	object:maj7
-name	source/Chord/data.json	/^		"name": "Major Triad",$/;"	s	language:JSON	object:maj
-name	source/Chord/data.json	/^		"name": "Minor Seventh",$/;"	s	language:JSON	object:m7
-name	source/Chord/data.json	/^		"name": "Minor Triad",$/;"	s	language:JSON	object:m
-name	source/Interval/data.json	/^		"name": "Diminished Fifth",$/;"	s	language:JSON	object:d5
-name	source/Interval/data.json	/^		"name": "Major Second",$/;"	s	language:JSON	object:M2
-name	source/Interval/data.json	/^		"name": "Major Seventh",$/;"	s	language:JSON	object:M7
-name	source/Interval/data.json	/^		"name": "Major Sixth",$/;"	s	language:JSON	object:M6
-name	source/Interval/data.json	/^		"name": "Major Third",$/;"	s	language:JSON	object:M3
-name	source/Interval/data.json	/^		"name": "Minor Second",$/;"	s	language:JSON	object:m2
-name	source/Interval/data.json	/^		"name": "Minor Seventh",$/;"	s	language:JSON	object:m7
-name	source/Interval/data.json	/^		"name": "Minor Sixth",$/;"	s	language:JSON	object:m6
-name	source/Interval/data.json	/^		"name": "Minor Third",$/;"	s	language:JSON	object:m3
-name	source/Interval/data.json	/^		"name": "Perfect Fifth",$/;"	s	language:JSON	object:P5
-name	source/Interval/data.json	/^		"name": "Perfect Fourth",$/;"	s	language:JSON	object:P4
-name	source/Interval/data.json	/^		"name": "Perfect Octave",$/;"	s	language:JSON	object:P8
-name	source/Interval/data.json	/^		"name": "Perfect Unison",$/;"	s	language:JSON	object:P1
+name	source/Chord/data.json	/^		"name": "Augmented Triad",$/;"	s	language:JSON	object:3
+name	source/Chord/data.json	/^		"name": "Diminished Seventh",$/;"	s	language:JSON	object:8
+name	source/Chord/data.json	/^		"name": "Diminished Triad",$/;"	s	language:JSON	object:2
+name	source/Chord/data.json	/^		"name": "Dominant Seventh",$/;"	s	language:JSON	object:5
+name	source/Chord/data.json	/^		"name": "Half Diminished Seventh",$/;"	s	language:JSON	object:7
+name	source/Chord/data.json	/^		"name": "Major Seventh",$/;"	s	language:JSON	object:4
+name	source/Chord/data.json	/^		"name": "Major Triad",$/;"	s	language:JSON	object:0
+name	source/Chord/data.json	/^		"name": "Minor Seventh",$/;"	s	language:JSON	object:6
+name	source/Chord/data.json	/^		"name": "Minor Triad",$/;"	s	language:JSON	object:1
+name	source/Interval/data.json	/^		"name": "Diminished Fifth",$/;"	s	language:JSON	object:6
+name	source/Interval/data.json	/^		"name": "Major Second",$/;"	s	language:JSON	object:2
+name	source/Interval/data.json	/^		"name": "Major Seventh",$/;"	s	language:JSON	object:11
+name	source/Interval/data.json	/^		"name": "Major Sixth",$/;"	s	language:JSON	object:9
+name	source/Interval/data.json	/^		"name": "Major Third",$/;"	s	language:JSON	object:4
+name	source/Interval/data.json	/^		"name": "Minor Second",$/;"	s	language:JSON	object:1
+name	source/Interval/data.json	/^		"name": "Minor Seventh",$/;"	s	language:JSON	object:10
+name	source/Interval/data.json	/^		"name": "Minor Sixth",$/;"	s	language:JSON	object:8
+name	source/Interval/data.json	/^		"name": "Minor Third",$/;"	s	language:JSON	object:3
+name	source/Interval/data.json	/^		"name": "Perfect Fifth",$/;"	s	language:JSON	object:7
+name	source/Interval/data.json	/^		"name": "Perfect Fourth",$/;"	s	language:JSON	object:5
+name	source/Interval/data.json	/^		"name": "Perfect Octave",$/;"	s	language:JSON	object:12
+name	source/Interval/data.json	/^		"name": "Perfect Unison",$/;"	s	language:JSON	object:0
 scripts	package.json	/^  "scripts": {$/;"	o	language:JSON
-steps	source/Interval/data.json	/^		"steps": 0,$/;"	n	language:JSON	object:P1
-steps	source/Interval/data.json	/^		"steps": 1,$/;"	n	language:JSON	object:m2
-steps	source/Interval/data.json	/^		"steps": 10,$/;"	n	language:JSON	object:m7
-steps	source/Interval/data.json	/^		"steps": 11,$/;"	n	language:JSON	object:M7
-steps	source/Interval/data.json	/^		"steps": 12,$/;"	n	language:JSON	object:P8
-steps	source/Interval/data.json	/^		"steps": 2,$/;"	n	language:JSON	object:M2
-steps	source/Interval/data.json	/^		"steps": 3,$/;"	n	language:JSON	object:m3
-steps	source/Interval/data.json	/^		"steps": 4,$/;"	n	language:JSON	object:M3
-steps	source/Interval/data.json	/^		"steps": 5,$/;"	n	language:JSON	object:P4
-steps	source/Interval/data.json	/^		"steps": 6,$/;"	n	language:JSON	object:d5
-steps	source/Interval/data.json	/^		"steps": 7,$/;"	n	language:JSON	object:P5
-steps	source/Interval/data.json	/^		"steps": 8,$/;"	n	language:JSON	object:m6
-steps	source/Interval/data.json	/^		"steps": 9,$/;"	n	language:JSON	object:M6
+steps	source/Interval/data.json	/^		"steps": 0,$/;"	n	language:JSON	object:0
+steps	source/Interval/data.json	/^		"steps": 1,$/;"	n	language:JSON	object:1
+steps	source/Interval/data.json	/^		"steps": 10,$/;"	n	language:JSON	object:10
+steps	source/Interval/data.json	/^		"steps": 11,$/;"	n	language:JSON	object:11
+steps	source/Interval/data.json	/^		"steps": 12,$/;"	n	language:JSON	object:12
+steps	source/Interval/data.json	/^		"steps": 2,$/;"	n	language:JSON	object:2
+steps	source/Interval/data.json	/^		"steps": 3,$/;"	n	language:JSON	object:3
+steps	source/Interval/data.json	/^		"steps": 4,$/;"	n	language:JSON	object:4
+steps	source/Interval/data.json	/^		"steps": 5,$/;"	n	language:JSON	object:5
+steps	source/Interval/data.json	/^		"steps": 6,$/;"	n	language:JSON	object:6
+steps	source/Interval/data.json	/^		"steps": 7,$/;"	n	language:JSON	object:7
+steps	source/Interval/data.json	/^		"steps": 8,$/;"	n	language:JSON	object:8
+steps	source/Interval/data.json	/^		"steps": 9,$/;"	n	language:JSON	object:9
 test	package.json	/^    "test": "echo \\"Error: no test specified\\" && exit 1"$/;"	s	language:JSON	object:scripts
 version	package.json	/^  "version": "0.0.1",$/;"	s	language:JSON

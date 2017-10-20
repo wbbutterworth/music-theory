@@ -1,79 +1,92 @@
-{
-	"P1": {
+[
+	{
 		"name": "Perfect Unison",
+		"abbr": "P1",
 		"steps": 0,
 		"degree": "1"
 	},
 
-	"m2": {
+	{
 		"name": "Minor Second",
+		"abbr": "m2",
 		"steps": 1,
 		"degree": "b2"
 	},
 
-	"M2": {
+	{
 		"name": "Major Second",
+		"abbr": "M2",
 		"steps": 2,
 		"degree": "2"
 	},
 
-	"m3": {
+	{
 		"name": "Minor Third",
+		"abbr": "m3",
 		"steps": 3,
 		"degree": "b3"
 	},
 
-	"M3": {
+	{
 		"name": "Major Third",
+		"abbr": "M3",
 		"steps": 4,
 		"degree": "3"
 	},
 
-	"P4": {
+	{
 		"name": "Perfect Fourth",
+		"abbr": "P4",
 		"steps": 5,
 		"degree": "4"
 	},
 
-	"d5": {
+	{
 		"name": "Diminished Fifth",
+		"abbr": "d5",
 		"steps": 6,
 		"degree": "b5"
 	},
 
-	"P5": {
+	{
 		"name": "Perfect Fifth",
+		"abbr": "P5",
 		"steps": 7,
 		"degree": "5"
 	},
 
-	"m6": {
+	{
 		"name": "Minor Sixth",
+		"abbr": "m6",
 		"steps": 8,
 		"degree": "b6"
 	},
 
-	"M6": {
+	{
 		"name": "Major Sixth",
+		"abbr": "M6",
 		"steps": 9,
 		"degree": "6"
 	},
 
-	"m7": {
+	{
 		"name": "Minor Seventh",
+		"abbr": "m7",
 		"steps": 10,
 		"degree": "b7"
 	},
 
-	"M7": {
+	{
 		"name": "Major Seventh",
+		"abbr": "M7",
 		"steps": 11,
 		"degree": "7"
 	},
 
-	"P8": {
+	{
 		"name": "Perfect Octave",
+		"abbr": "P8",
 		"steps": 12,
 		"degree": "8"
 	}
-}
+]
