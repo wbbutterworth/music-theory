@@ -1,0 +1,79 @@
+{
+	"P1": {
+		"name": "Perfect Unison",
+		"steps": 0,
+		"degree": "1"
+	},
+
+	"m2": {
+		"name": "Minor Second",
+		"steps": 1,
+		"degree": "b2"
+	},
+
+	"M2": {
+		"name": "Major Second",
+		"steps": 2,
+		"degree": "2"
+	},
+
+	"m3": {
+		"name": "Minor Third",
+		"steps": 3,
+		"degree": "b3"
+	},
+
+	"M3": {
+		"name": "Major Third",
+		"steps": 4,
+		"degree": "3"
+	},
+
+	"P4": {
+		"name": "Perfect Fourth",
+		"steps": 5,
+		"degree": "4"
+	},
+
+	"d5": {
+		"name": "Diminished Fifth",
+		"steps": 6,
+		"degree": "b5"
+	},
+
+	"P5": {
+		"name": "Perfect Fifth",
+		"steps": 7,
+		"degree": "5"
+	},
+
+	"m6": {
+		"name": "Minor Sixth",
+		"steps": 8,
+		"degree": "b6"
+	},
+
+	"M6": {
+		"name": "Major Sixth",
+		"steps": 9,
+		"degree": "6"
+	},
+
+	"m7": {
+		"name": "Minor Seventh",
+		"steps": 10,
+		"degree": "b7"
+	},
+
+	"M7": {
+		"name": "Major Seventh",
+		"steps": 11,
+		"degree": "7"
+	},
+
+	"P8": {
+		"name": "Perfect Octave",
+		"steps": 12,
+		"degree": "8"
+	}
+}
