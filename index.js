@@ -1,6 +1,5 @@
 const Chord = require( './source/Chord' );
+const Interval = require( './source/Interval' );
 
-const chord = new Chord( 'Csus2' );
-// const chord2 = new Chord( 'Cmaj7' );
-// const chord3 = new Chord( 'C7' );
-// const chord4 = new Chord( 'Cm' );
+// const interval = new Interval( 'P1' );
+const chord = new Chord( 'Cmaj' );
