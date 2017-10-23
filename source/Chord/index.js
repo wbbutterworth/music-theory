@@ -6,24 +6,26 @@ const Chord = function( symbol ) {
 }
 
 Chord.prototype.define = function( symbol ) {
-	const match = symbol.match( /(^[A-G])([maj|m|dim|aug]*[7|9|11|13]*)($|sus[2|4]|add[2|4|6]|#4)/ );
+	const chordAbbrs     = chords.map( ( chord ) => { return chord.abbr; } ).join( '|' );
+	const regexMatch     = new RegExp( `(^[A-G])\/?([A-G])?(${ chordAbbrs })($|sus(?:2|4)|add(?:2|4|6|9|11|13)|(?:#|b)(?:5|9|11|13)|no5|no3)` );
+	const match          = symbol.match( regexMatch );
 
-	this.root     = match && match[1] ? match[1] : undefined;
-	this.abbr     = match && match[2] ? match[2] : 'maj';
-	this.modifier = match && match[3] ? match[3] : undefined;
+	this.root      = match && match[1] ? match[1] : undefined;
+	this.inversion = match && match[2] ? match[2] : undefined;
+	this.abbr      = match && match[3] ? match[3] : 'maj';
+	this.modifier  = match && match[4] ? match[4] : undefined;
 
-	// this.extenson = match && match[3] ? match[3] : undefined;
-	// this.modifier = match && match[4] ? match[4] : undefined;
+	console.log( this.root, this.inversion, this.abbr, this.modifier );
 
-	this.data = chords.find( ( chord ) => {
-		return this.abbr === chord.abbr;
-	} );
+	// this.data = chords.find( ( chord ) => {
+	// 	return this.abbr === chord.abbr;
+	// } );
 
-	this.intervals = this.data.degrees.map( ( degree ) => {
-		return new Interval( degree );
-	} );
+	// this.intervals = this.data.degrees.map( ( degree ) => {
+	// 	return new Interval( degree );
+	// } );
 
-	console.log( this.intervals );
+	// console.log( this.intervals );
 }
 
 Chord.prototype.extend = function( extension ) {
