@@ -1,35 +1,32 @@
 const chords   = require( './data.json' );
+const Note     = require( '../Note' );
 const Interval = require( '../Interval' );
 
 const Chord = function( symbol ) {
-	this.define( symbol );
-}
+	const symbolMatch    = symbol.match( /(^[A-G])\/?([A-G])?((?:mmaj|maj|m|dim|aug)?(?:5|6|7|9|11|13)?)(.*)/ );
+	const rootNote       = symbolMatch && symbolMatch[1] ? symbolMatch[1] : undefined;
+	const bottomNote     = symbolMatch && symbolMatch[2] ? symbolMatch[2] : undefined;
+	const chordSymbol    = symbolMatch && symbolMatch[3] ? symbolMatch[3] : 'maj';
+	const chordModifiers = symbolMatch && symbolMatch[4] ? symbolMatch[4].split( /(?=[#|b]\d*)|(?=add\d*)|(?=sus\d)|(?=no\d)/ ) : undefined;
 
-Chord.prototype.define = function( symbol ) {
-	const chordAbbrs     = chords.map( ( chord ) => { return chord.abbr; } ).join( '|' );
-	const regexMatch     = new RegExp( `(^[A-G])\/?([A-G])?(${ chordAbbrs })($|sus(?:2|4)|add(?:2|4|6|9|11|13)|(?:#|b)(?:5|9|11|13)|no5|no3)` );
-	const match          = symbol.match( regexMatch );
+	const data = chords.find( ( chord ) => {
+		return chord.symbol === chordSymbol;
+	} );
 
-	this.root      = match && match[1] ? match[1] : undefined;
-	this.inversion = match && match[2] ? match[2] : undefined;
-	this.abbr      = match && match[3] ? match[3] : 'maj';
-	this.modifier  = match && match[4] ? match[4] : undefined;
+	// TODO set inversion using bottomNote
 
-	console.log( this.root, this.inversion, this.abbr, this.modifier );
+	this.root   = new Note( rootNote );
+	this.symbol = symbol;
 
-	// this.data = chords.find( ( chord ) => {
-	// 	return this.abbr === chord.abbr;
-	// } );
+	this.intervals = data.degrees.map( ( degree ) => {
+		return new Interval( degree );
+	} );
 
-	// this.intervals = this.data.degrees.map( ( degree ) => {
-	// 	return new Interval( degree );
-	// } );
+	this.notes = this.intervals.map( ( interval ) => {
+		return interval.getNote( this.root );
+	} );
 
-	// console.log( this.intervals );
-}
-
-Chord.prototype.extend = function( extension ) {
-
+	// console.log( this.notes );
 }
 
 Chord.prototype.modify = function( modifier ) {
