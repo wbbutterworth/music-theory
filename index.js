@@ -1,14 +1,14 @@
 const Chord    = require( './source/Chord' );
 const Note     = require( './source/Note' );
-const Interval = require( './source/Interval' );
+// const Interval = require( './source/Interval' );
 
-// const interval = new Interval( 'M3' );
-// interval.getNote( 'C' );
+// const first = new Interval( 'P1' );
+// const third = new Interval( 'M3' );
+// const fifth = new Interval( 'P5' );
+// const intervals = [ first, third, fifth ];
+
+// console.log( new Note.Collection.fromIntervals( 'C', intervals ) );
+// console.log( interval.getNote( 'C' ) );
 // new Chord( 'Cmsus2sus4add13#11b5' );
-// const chord = new Chord( 'C/Gmmaj9#11' );
-// const chord2 = new Chord( 'Cmmaj9#11' );
-
-// console.log( Note.list().length );
-const collection = new Note.Collection( [ 'C', 'E', 'G#'] );
-console.log( collection.getFlats() );
-// const note = new Note( 'A#' );
+const chord = new Chord( 'Gmaj7' );
+console.log( chord );

@@ -1,22 +1,37 @@
+//
+// Interval
+//
+// :: Constructor
+// :: Get Note
+
+const data = require( './data.json' );
 const Note = require( '../Note' );
-const intervals = require( './data.json' );
 
-const Interval = function( symbol ) {
-	this.symbol = symbol;
+//
+// Constructor
+//
 
-	if ( this.symbol.indexOf( 9 )  !== -1 ) this.symbol = this.symbol.replace( 9, 2 );
-	if ( this.symbol.indexOf( 11 ) !== -1 ) this.symbol = this.symbol.replace( 11, 2 );
-	if ( this.symbol.indexOf( 13 ) !== -1 ) this.symbol = this.symbol.replace( 13, 2 );
-
-	const data = intervals.find( ( interval ) => {
-		return interval.symbol === this.symbol || interval.degree === this.symbol;
+const Interval = function( symbol, rootSymbol ) {
+	const entry = data.find( ( entry ) => {
+		return [
+			entry.symbol,
+			entry.degree
+		].includes( symbol );
 	} );
 
-	this.degree = data.degree;
+	if ( rootSymbol ) {
+		this.note = Note.fromInterval( rootSymbol, this );
+	}
+
+	Object.assign( this, entry );
 }
 
+//
+// Get Note
+//
+
 Interval.prototype.getNote = function( root ) {
-	root = root instanceof Note ? root : new Note( root );
+	return Note.fromInterval( root, this );
 }
 
 module.exports = Interval;

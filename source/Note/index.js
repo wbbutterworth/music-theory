@@ -1,22 +1,101 @@
-const notes = require( './data.json' );
+//
+// Note
+//
+// :: Constructor
+// :: From Interval
+// :: Is Natural
+// :: IS Accidental
+// :: Collection Constructor
+// :: Collection From Intervals
+// :: Collection Get Notes
+// :: Collection Get Sharps
+// :: Collection Get Flats
+
+const data = require( './data.json' );
+
+//
+// Constructor
+//
 
 const Note = function( symbol ) {
-	const data = notes.find( ( note ) => {
-		return [ note.natural, note.sharp, note.flat ].includes( symbol );
+	const entry = data.find( ( entry ) => {
+		return [
+			entry.natural,
+			entry.sharp,
+			entry.flat
+		].includes( symbol );
 	} );
 
-	Object.assign( this, data );
+	// inject the data object into the note instance
+	Object.assign( this, entry );
+
+	// create an index reference of the entry in the data array
+	this.index = data.indexOf( entry );
 }
 
-Note.Collection = function ( notes ) {
-	if ( notes[0] instanceof Note ) {
+//
+// From Interval
+//
+
+Note.fromInterval = function( root, interval ) {
+	root = root instanceof Note ? root : new Note( root );
+
+	const index  = ( root.index + interval.steps ) % data.length;
+	const entry  = data[ index || root.index ];
+	const symbol = entry.natural || entry.sharp;
+	const note   = new Note( symbol );
+
+	note.interval = interval;
+	return note;
+}
+
+//
+// Is Natural
+//
+
+Note.prototype.isNatural = function() {
+	return this.natural !== false;
+}
+
+//
+// Is Accidental
+//
+
+Note.prototype.isAccidental = function() {
+	return this.natural === false;
+}
+
+//
+// Collection Constructor
+//
+
+Note.Collection = function( array ) {
+	const notes   = array[0] instanceof Note ? array : undefined;
+	const symbols = array[0] instanceof String ? array : undefined;
+
+	if ( notes ) {
 		this.notes = notes;
-	} else {
-		this.notes = notes.map( ( note ) => {
-			return new Note( note );
+	} else if ( symbols ) {
+		this.notes = symbols.map( ( symbol ) => {
+			return new Note( symbol );
 		} );
 	}
+
 }
+
+//
+// Collection From Intervals
+//
+
+Note.Collection.fromIntervals = function( root, intervals ) {
+	return intervals.map( ( interval ) =>{
+		return new Note.fromInterval( root, interval );
+	} );
+}
+
+//
+// Collection Get Notes
+//
 
 Note.Collection.prototype.getNotes = function( sharp ) {
 	sharp = typeof sharp === 'undefined' ? true : false;
@@ -28,33 +107,24 @@ Note.Collection.prototype.getNotes = function( sharp ) {
 	}
 }
 
+//
+// Collection Get Sharps
+//
+
 Note.Collection.prototype.getSharps = function() {
 	return this.notes.map( ( note ) => {
-		return note.natural || note.sharp;
+		return note.data.natural || note.data.sharp;
 	} );
 }
+
+//
+// Get Flats
+//
 
 Note.Collection.prototype.getFlats = function() {
 	return this.notes.map( ( note ) => {
-		return note.natural || note.flat;
+		return note.data.natural || note.data.flat;
 	} );
 }
-
-Note.list = function( sharps ) {
-	sharps = typeof sharps === 'undefined' ? true : false;
-
-	return notes.filter( ( note ) => {
-		if ( sharps ) {
-			return note.symbol.indexOf( 'b' ) === -1;
-		} else {
-			return note.symbol.indexOf( '#' ) === -1;
-		}
-	} ).map( ( note ) => { return new Note( note.symbol ) } );
-}
-
-Note.prototype.sharp = function() {}
-
-Note.prototype.flat = function() {}
-Note.prototype.flip = function() {}
 
 module.exports = Note;
