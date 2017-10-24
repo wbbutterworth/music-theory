@@ -16,8 +16,7 @@ const Interval = function( symbol ) {
 }
 
 Interval.prototype.getNote = function( root ) {
-	// root = root instanceof Note ? root : new Note( root );
-	// console.log( Note.sharps().length );
+	root = root instanceof Note ? root : new Note( root );
 }
 
 module.exports = Interval;
