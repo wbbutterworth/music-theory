@@ -33,18 +33,8 @@ const Chord = function( symbol ) {
 	this.intervals = entry.degrees.map( ( degree ) => {
 		return new Interval( degree, rootSymbol );
 	} );
-}
 
-//
-// Notes
-//
-
-Chord.prototype.notes = function() {
-	const notes = this.intervals.map( ( interval ) => {
-		return interval.note;
-	} );
-
-	return new Note.Collection( notes );
+	this.notes = new Note.Collection.fromIntervals( this.intervals );
 }
 
 module.exports = Chord;

@@ -11,4 +11,4 @@ const Note     = require( './source/Note' );
 // console.log( interval.getNote( 'C' ) );
 // new Chord( 'Cmsus2sus4add13#11b5' );
 const chord = new Chord( 'Gmaj7' );
-console.log( chord );
+console.log( chord.notes.symbols( 'b' ) );

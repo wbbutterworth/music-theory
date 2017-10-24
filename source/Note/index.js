@@ -7,9 +7,7 @@
 // :: IS Accidental
 // :: Collection Constructor
 // :: Collection From Intervals
-// :: Collection Get Notes
-// :: Collection Get Sharps
-// :: Collection Get Flats
+// :: Collection Symbols
 
 const data = require( './data.json' );
 
@@ -37,7 +35,7 @@ const Note = function( symbol ) {
 // From Interval
 //
 
-Note.fromInterval = function( root, interval ) {
+Note.fromInterval = function( interval, root ) {
 	root = root instanceof Note ? root : new Note( root );
 
 	const index  = ( root.index + interval.steps ) % data.length;
@@ -45,7 +43,6 @@ Note.fromInterval = function( root, interval ) {
 	const symbol = entry.natural || entry.sharp;
 	const note   = new Note( symbol );
 
-	note.interval = interval;
 	return note;
 }
 
@@ -87,44 +84,39 @@ Note.Collection = function( array ) {
 // Collection From Intervals
 //
 
-Note.Collection.fromIntervals = function( root, intervals ) {
-	return intervals.map( ( interval ) =>{
-		return new Note.fromInterval( root, interval );
+Note.Collection.fromIntervals = function( intervals, root ) {
+	const notes = intervals.map( ( interval ) =>{
+		if ( interval.note ) {
+			return interval.note;
+		} else {
+			return Note.fromInterval( interval, root );
+		}
 	} );
+
+	return new Note.Collection( notes );
 }
 
 //
-// Collection Get Notes
+// Collection Symbols
 //
 
-Note.Collection.prototype.getNotes = function( sharp ) {
-	sharp = typeof sharp === 'undefined' ? true : false;
+Note.Collection.prototype.symbols = function( notation ) {
+	notation = notation || '#';
 
-	if ( sharp ) {
-		return this.getSharps();
-	} else {
-		return this.getFlats();
+	let symbols;
+
+	if ( notation === '#' ) {
+		symbols = this.notes.map( ( note ) => {
+			return note.natural || note.sharp;
+		} );
+	} else if ( notation === 'b'){
+		symbols = this.notes.map( ( note ) => {
+			console.log( note );
+			return note.natural || note.flat;
+		} );
 	}
-}
 
-//
-// Collection Get Sharps
-//
-
-Note.Collection.prototype.getSharps = function() {
-	return this.notes.map( ( note ) => {
-		return note.data.natural || note.data.sharp;
-	} );
-}
-
-//
-// Get Flats
-//
-
-Note.Collection.prototype.getFlats = function() {
-	return this.notes.map( ( note ) => {
-		return note.data.natural || note.data.flat;
-	} );
+	return symbols;
 }
 
 module.exports = Note;
