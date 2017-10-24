@@ -1,14 +1,42 @@
 const notes = require( './data.json' );
 
 const Note = function( symbol ) {
-	this.symbol       = symbol;
-	this.isSharp      = this.symbol.indexOf( '#' ) !== -1;
-	this.isFlat       = this.symbol.indexOf( 'b' ) !== -1;
-	this.isNatural    = !this.isSharp && !this.isFlat;
-	this.isAccidental = this.isSharp || this.isFlat;
-
 	const data = notes.find( ( note ) => {
-		return note.symbol === this.symbol || note.sharp === this.symbol || note.flat === this.symbol;
+		return [ note.natural, note.sharp, note.flat ].includes( symbol );
+	} );
+
+	Object.assign( this, data );
+}
+
+Note.Collection = function ( notes ) {
+	if ( notes[0] instanceof Note ) {
+		this.notes = notes;
+	} else {
+		this.notes = notes.map( ( note ) => {
+			return new Note( note );
+		} );
+	}
+}
+
+Note.Collection.prototype.getNotes = function( sharp ) {
+	sharp = typeof sharp === 'undefined' ? true : false;
+
+	if ( sharp ) {
+		return this.getSharps();
+	} else {
+		return this.getFlats();
+	}
+}
+
+Note.Collection.prototype.getSharps = function() {
+	return this.notes.map( ( note ) => {
+		return note.natural || note.sharp;
+	} );
+}
+
+Note.Collection.prototype.getFlats = function() {
+	return this.notes.map( ( note ) => {
+		return note.natural || note.flat;
 	} );
 }
 

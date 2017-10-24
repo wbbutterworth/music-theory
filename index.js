@@ -8,4 +8,7 @@ const Interval = require( './source/Interval' );
 // const chord = new Chord( 'C/Gmmaj9#11' );
 // const chord2 = new Chord( 'Cmmaj9#11' );
 
-console.log( Note.list().length );
+// console.log( Note.list().length );
+const collection = new Note.Collection( [ 'C', 'E', 'G#'] );
+console.log( collection.getFlats() );
+// const note = new Note( 'A#' );
