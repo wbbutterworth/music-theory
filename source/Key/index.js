@@ -13,6 +13,11 @@ const Scale    = require( '../Scale' );
 //
 
 const Key = function( rootSymbol ) {
+
+	// if the root contains a flat or is the key of F prefer flats
+	this.notation = /F$|b$/.test( rootSymbol ) ? 'b' : '#';
+
+	// define the key root
 	this.root = rootSymbol instanceof Note ? rootSymbol : new Note( rootSymbol );
 
 	// define modes
@@ -23,6 +28,12 @@ const Key = function( rootSymbol ) {
 	this.mixolydian = new Scale( 'mixolydian', this.ionian.degree( 5 ).note );
 	this.aeolian    = new Scale( 'aeolian',    this.ionian.degree( 6 ).note );
 	this.locrian    = new Scale( 'locrian',    this.ionian.degree( 7 ).note );
+
+	// make a reference to the major scale notes
+	this.notes = this.ionian.notes.symbols( this.notation );
+
+	// make a reference to the note symbols
+	this.symbols = this.notes.symbols( this.notation );
 
 	// make a modes reference array
 	this.modes = [

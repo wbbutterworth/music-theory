@@ -9,6 +9,7 @@
 // :: Collection Constructor
 // :: Collection From Intervals
 // :: Collection Symbols
+// :: Collection Degree
 
 const data = require( './data.json' );
 
@@ -42,6 +43,8 @@ Note.fromInterval = function( interval, rootSymbol ) {
 	const entry  = data[ index || root.index ];
 	const symbol = entry.natural || entry.sharp;
 	const note   = new Note( symbol );
+
+	note.degree = interval.degree;
 
 	return note;
 }
@@ -118,6 +121,16 @@ Note.Collection.fromIntervals = function( intervals, rootSymbol ) {
 Note.Collection.prototype.symbols = function( notation ) {
 	return this.map( ( note ) => {
 		return note.symbol( notation );
+	} );
+}
+
+//
+// Collection Degree
+//
+
+Note.Collection.prototype.degree = function( degree ) {
+	return this.find( ( note ) => {
+		return parseInt( note.degree, 10 ) === degree;
 	} );
 }
 

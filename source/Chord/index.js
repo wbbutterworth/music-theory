@@ -2,6 +2,7 @@
 // Chord
 //
 // :: Constructor
+// :: Degree
 // :: Builder
 
 const data     = require( './data.json' );
@@ -125,6 +126,16 @@ Chord.prototype._define = function( symbol, rootSymbol, bottomSymbol ) {
 	} );
 
 	if ( this.root ) this.notes = new Note.Collection.fromIntervals( this.intervals, this.root );
+}
+
+//
+// Degree
+//
+
+Chord.prototype.degree = function( degree ) {
+	return this.intervals.find( ( interval ) => {
+		return parseInt( interval.degree, 10 ) === degree;
+	} );
 }
 
 //
