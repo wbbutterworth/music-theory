@@ -10,7 +10,7 @@ const Note = require( '../Note' );
 // Constructor
 //
 
-const Interval = function( symbol, root ) {
+const Interval = function( symbol, rootSymbol ) {
 	if ( /^(b|#)?9/.test( symbol ) )  symbol = symbol.replace( 9, 2 );
 	if ( /^(b|#)?11/.test( symbol ) ) symbol = symbol.replace( 11, 4 );
 	if ( /^(b|#)?13/.test( symbol ) ) symbol = symbol.replace( 13, 6 );
@@ -23,7 +23,8 @@ const Interval = function( symbol, root ) {
 	} );
 
 	Object.assign( this, entry );
-	if ( root ) this.note = Note.fromInterval( this, root );
+
+	if ( rootSymbol ) this.note = Note.fromInterval( this, rootSymbol );
 }
 
 module.exports = Interval;

@@ -1,0 +1,9 @@
+[
+	{ "name": "Major",      "degrees": [ "1", "2", "3", "4", "5", "6", "7" ]       },
+	{ "name": "Dorian",     "degrees": [ "1", "2", "b3", "4", "5", "6", "b7" ]     },
+	{ "name": "Phrygian",   "degrees": [ "1", "b2", "b3", "4", "5", "b6", "b7" ]   },
+	{ "name": "Lydian",     "degrees": [ "1", "2", "3", "#4", "5", "6", "7" ]      },
+	{ "name": "Mixolydian", "degrees": [ "1", "2", "3", "4", "5", "6", "b7" ]      },
+	{ "name": "Aeolian",    "degrees": [ "1", "2", "b3", "4", "5", "b6", "b7" ]    },
+	{ "name": "Locrian",    "degrees": [ "1", "b2", "b3", "4", "b5", "b6", "bb7" ] }
+]

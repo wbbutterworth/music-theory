@@ -20,7 +20,7 @@ const Chord = function( symbol ) {
 	const rootSymbol   = symbolMatch && symbolMatch[1] ? symbolMatch[1] : undefined;
 	const bottomSymbol = symbolMatch && symbolMatch[2] ? symbolMatch[2] : undefined;
 	const chordSymbol  = symbolMatch && symbolMatch[3] ? symbolMatch[3] : 'maj';
-	const modifiers    = symbolMatch && symbolMatch[4] ? symbolMatch[4].split( regexModifierSplit ) : undefined;
+	const modifiers    = symbolMatch && symbolMatch[4] ? symbolMatch[4].split( regexModifierSplit ) : [];
 
 	const entry = data.find( ( entry ) => {
 		return entry.symbol === chordSymbol;
@@ -115,14 +115,16 @@ Chord.prototype._modify = function( modifiers ) {
 }
 
 Chord.prototype._define = function( symbol, rootSymbol, bottomSymbol ) {
+	this.root   = rootSymbol   ? new Note( rootSymbol )   : undefined;
+	this.bottom = bottomSymbol ? new Note( bottomSymbol ) : undefined;
+
 	this.symbol = symbol;
-	this.root   = new Note( rootSymbol );
 
 	this.intervals = this.degrees.map( ( degree ) => {
 		return new Interval( degree, rootSymbol );
 	} );
 
-	this.notes = new Note.Collection.fromIntervals( this.intervals );
+	if ( this.root ) this.notes = new Note.Collection.fromIntervals( this.intervals, this.root );
 }
 
 //
@@ -130,7 +132,7 @@ Chord.prototype._define = function( symbol, rootSymbol, bottomSymbol ) {
 //
 
 Chord.Builder = function() {
-
+	//..
 }
 
 module.exports = Chord;

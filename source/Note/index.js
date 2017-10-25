@@ -3,6 +3,7 @@
 //
 // :: Constructor
 // :: From Interval
+// :: Symbol
 // :: Is Natural
 // :: IS Accidental
 // :: Collection Constructor
@@ -35,15 +36,32 @@ const Note = function( symbol ) {
 // From Interval
 //
 
-Note.fromInterval = function( interval, root ) {
-	root = root instanceof Note ? root : new Note( root );
-
+Note.fromInterval = function( interval, rootSymbol ) {
+	const root   = rootSymbol instanceof Note ? rootSymbol : new Note( rootSymbol );
 	const index  = ( root.index + interval.steps ) % data.length;
 	const entry  = data[ index || root.index ];
 	const symbol = entry.natural || entry.sharp;
 	const note   = new Note( symbol );
 
 	return note;
+}
+
+//
+// Symbol
+//
+
+Note.prototype.symbol = function( notation ) {
+	notation = notation || '#';
+
+	let symbol;
+
+	if ( notation === '#' ) {
+		symbol = this.natural || this.sharp;
+	} else {
+		symbol = this.natural || this.flat;
+	}
+
+	return symbol;
 }
 
 //
@@ -67,29 +85,26 @@ Note.prototype.isAccidental = function() {
 //
 
 Note.Collection = function( array ) {
-	const notes   = array[0] instanceof Note ? array : undefined;
-	const symbols = array[0] instanceof String ? array : undefined;
+	const notes = arguments[0].map( ( note ) => {
+		return note instanceof Note ? note : new Note( note );
+	} );
 
-	if ( notes ) {
-		this.notes = notes;
-	} else if ( symbols ) {
-		this.notes = symbols.map( ( symbol ) => {
-			return new Note( symbol );
-		} );
-	}
-
+	this.push.apply( this, notes );
+	return this;
 }
+
+Note.Collection.prototype = Object.create( Array.prototype );
 
 //
 // Collection From Intervals
 //
 
-Note.Collection.fromIntervals = function( intervals, root ) {
+Note.Collection.fromIntervals = function( intervals, rootSymbol ) {
 	const notes = intervals.map( ( interval ) =>{
 		if ( interval.note ) {
 			return interval.note;
 		} else {
-			return Note.fromInterval( interval, root );
+			return Note.fromInterval( interval, rootSymbol );
 		}
 	} );
 
@@ -101,21 +116,9 @@ Note.Collection.fromIntervals = function( intervals, root ) {
 //
 
 Note.Collection.prototype.symbols = function( notation ) {
-	notation = notation || '#';
-
-	let symbols;
-
-	if ( notation === '#' ) {
-		symbols = this.notes.map( ( note ) => {
-			return note.natural || note.sharp;
-		} );
-	} else if ( notation === 'b'){
-		symbols = this.notes.map( ( note ) => {
-			return note.natural || note.flat;
-		} );
-	}
-
-	return symbols;
+	return this.map( ( note ) => {
+		return note.symbol( notation );
+	} );
 }
 
 module.exports = Note;
