@@ -1,6 +1,6 @@
 [
 	{ "natural": "A",   "sharp": false, "flat": false },
-	{ "natural": false, "sharp": "Bb",  "flat": "A#"  },
+	{ "natural": false, "sharp": "A#",  "flat": "Bb"  },
 	{ "natural": "B",   "sharp": false, "flat": false },
 	{ "natural": "C",   "sharp": false, "flat": false },
 	{ "natural": false, "sharp": "C#",  "flat": "Db"  },

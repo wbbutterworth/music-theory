@@ -111,7 +111,6 @@ Note.Collection.prototype.symbols = function( notation ) {
 		} );
 	} else if ( notation === 'b'){
 		symbols = this.notes.map( ( note ) => {
-			console.log( note );
 			return note.natural || note.flat;
 		} );
 	}
