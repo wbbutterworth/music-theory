@@ -30,7 +30,7 @@ const Key = function( rootSymbol ) {
 	this.locrian    = new Scale( 'locrian',    this.ionian.degree( 7 ).note );
 
 	// make a reference to the major scale notes
-	this.notes = this.ionian.notes.symbols( this.notation );
+	this.notes = this.ionian.notes;
 
 	// make a reference to the note symbols
 	this.symbols = this.notes.symbols( this.notation );
