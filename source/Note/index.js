@@ -29,6 +29,9 @@ const Note = function( symbol ) {
 	// inject the data object into the note instance
 	Object.assign( this, entry );
 
+	this.isNatural    = this.natural !== true;
+	this.isAccidental = this.natural === false;
+
 	// create an index reference of the entry in the data array
 	this.index = data.indexOf( entry );
 }
@@ -65,22 +68,6 @@ Note.prototype.symbol = function( notation ) {
 	}
 
 	return symbol;
-}
-
-//
-// Is Natural
-//
-
-Note.prototype.isNatural = function() {
-	return this.natural !== false;
-}
-
-//
-// Is Accidental
-//
-
-Note.prototype.isAccidental = function() {
-	return this.natural === false;
 }
 
 //
