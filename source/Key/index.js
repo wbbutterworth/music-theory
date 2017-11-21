@@ -63,6 +63,25 @@ const Key = function( rootSymbol ) {
 	this.V7   = new Chord( `${ this.ionian.degree( 5 ).note.symbol() }maj7` );
 	this.vi7  = new Chord( `${ this.ionian.degree( 6 ).note.symbol() }m7` );
 	this.vii7 = new Chord( `${ this.ionian.degree( 7 ).note.symbol() }dim7` );
+
+	this.chords = [
+		this.I,
+		this.ii,
+		this.iii,
+		this.IV,
+		this.V,
+		this.vi,
+		this.vii,
+	];
+}
+
+Key.prototype.getChordFromNote = function( root ) {
+	root = root instanceof Note ? root : new Note( root );
+
+	const index  = this.notes.findIndex( ( note ) => ( note.symbol() === root.symbol() ) );
+	const degree = index + 1;
+
+	return this.chords[degree];
 }
 
 module.exports = Key;
