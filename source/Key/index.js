@@ -2,6 +2,8 @@
 // Key
 //
 // :: Constructor
+// :: Get Chord From Note
+// :: Get Chord From Degree
 
 const Note     = require( '../Note' );
 const Interval = require( '../Interval' );
@@ -75,13 +77,23 @@ const Key = function( rootSymbol ) {
 	];
 }
 
+//
+// Get Chord From Note
+//
+
 Key.prototype.getChordFromNote = function( root ) {
 	root = root instanceof Note ? root : new Note( root );
+	const index = this.notes.findIndex( ( note ) => ( note.symbol() === root.symbol() ) );
+	return this.chords[index];
+}
 
-	const index  = this.notes.findIndex( ( note ) => ( note.symbol() === root.symbol() ) );
-	const degree = index + 1;
+//
+// Get Chord from Degree
+//
 
-	return this.chords[degree];
+Key.prototype.getChordFromDegree = function( degree ) {
+	const index = degree - 1;
+	return this.chords[index]
 }
 
 module.exports = Key;
