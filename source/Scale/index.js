@@ -2,6 +2,7 @@
 // Scale
 //
 // :: Constructor
+// :: All
 // :: Degree
 
 const data     = require( './data.json' );
@@ -26,6 +27,24 @@ const Scale = function( name, rootSymbol ) {
 	} );
 
 	if ( this.root ) this.notes = new Note.Collection.fromIntervals( this.intervals, this.root );
+}
+
+//
+// All
+//
+
+Scale.all = function() {
+	return data.map( ( entry ) => {
+		return new Scale( entry.name );
+	} );
+}
+
+//
+// Names
+//
+
+Scale.names = function() {
+	return data.map( ( entry ) => ( entry.name ) );
 }
 
 //

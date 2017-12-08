@@ -37,6 +37,22 @@ const Note = function( symbol ) {
 }
 
 //
+// All
+//
+
+Note.all = function( accidentals ) {
+	accidentals = accidentals || '#';
+
+	return data.map( ( entry ) => {
+		if ( entry.natural ) {
+			return entry.natural;
+		} else {
+			return accidentals === '#' ? entry.sharp : entry.flat;
+		}
+	} );
+}
+
+//
 // From Interval
 //
 

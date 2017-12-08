@@ -9,7 +9,7 @@ const data     = require( './data.json' );
 const Note     = require( '../Note' );
 const Interval = require( '../Interval' );
 
-const regexSymbolMatch   = /(^[A-G](?:b|#)?)\/?([A-G](?:b|#)?)?((?:mmaj|maj|m|dim|aug)?(?:5|6|7|9|11|13)?)(.*)/;
+const regexSymbolMatch   = /^([A-G](?:b|#)?)?\/?([A-G](?:b|#)?)?((?:mmaj|maj|m|dim|aug)?(?:5|6|7|9|11|13)?)(.*)/;
 const regexModifierSplit = /(?=(?:#|b)\d+)|(?=add\d+)|(?=sus\dsus\d)(?=sus\d(?!sus\d))|(?=no\d)/;
 
 //
@@ -126,6 +126,16 @@ Chord.prototype._define = function( symbol, rootSymbol, bottomSymbol ) {
 	} );
 
 	if ( this.root ) this.notes = new Note.Collection.fromIntervals( this.intervals, this.root );
+}
+
+//
+// All
+//
+
+Chord.all = function() {
+	return data.map( ( entry ) => {
+		return new Chord( entry.symbol );
+	} );
 }
 
 //
