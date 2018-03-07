@@ -2,6 +2,8 @@
 // Interval
 //
 // :: Constructor
+// :: Apply
+// :: Invert
 
 const data = require( './data.json' );
 const Note = require( '../Note' );
@@ -25,6 +27,25 @@ const Interval = function( symbol, rootSymbol ) {
 	Object.assign( this, entry );
 
 	if ( rootSymbol ) this.note = Note.fromInterval( this, rootSymbol );
+}
+
+//
+// Apply
+//
+
+Interval.prototype.apply = function( root ) {
+	return new Note.fromInterval( this, root );
+}
+
+//
+// Invert
+//
+
+Interval.prototype.invert = function() {
+	const index  = data.findIndex( ( entry ) => ( entry.symbol === this.symbol ) );
+	const symbol = data[ data.length - 1 - index ].symbol;
+
+	return new Interval( symbol );
 }
 
 module.exports = Interval;
