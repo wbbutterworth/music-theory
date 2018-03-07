@@ -75,7 +75,7 @@ Note.prototype.symbol = function( notation ) {
 //
 
 Note.Collection = function( array ) {
-	const notes = arguments[0].map( ( note ) => {
+	const notes = arguments.length === 0 ? [] : arguments[0].map( ( note ) => {
 		return note instanceof Note ? note : new Note( note );
 	} );
 
